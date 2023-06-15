@@ -17,24 +17,29 @@ openOverlayButton.addEventListener("click", openOverlay);
 const closeButton = document.getElementById("close-button");
 closeButton.addEventListener("click", closeOverlay);
 ////////////////////////////////////////////////////////////////////////
+
 const noButton = document.getElementById("no-button");
 noButton.addEventListener("mouseover", () => {
-  const x = Math.floor(Math.random() * window.innerWidth);
-  const y = Math.floor(Math.random() * window.innerHeight);
-
-
   const buttonWidth = noButton.offsetWidth;
   const buttonHeight = noButton.offsetHeight;
   const maxX = window.innerWidth - buttonWidth;
   const maxY = window.innerHeight - buttonHeight;
-  const adjustedX = x < maxX ? x : maxX;
-  const adjustedY = y < maxY ? y : maxY;
 
+  const adjustedX = Math.floor(Math.random() * (maxX + 1));
+  const adjustedY = Math.floor(Math.random() * (maxY + 1));
 
-  noButton.style.position = "absolute";
-  noButton.style.left = `${adjustedX}px`;
-  noButton.style.top = `${adjustedY}px`;
+  const minDistance = 100; // Distância mínima do botão em relação à borda
+
+  const finalX = Math.max(minDistance, Math.min(adjustedX, maxX - minDistance));
+  const finalY = Math.max(minDistance, Math.min(adjustedY, maxY - minDistance));
+
+  noButton.style.position = "fixed";
+  noButton.style.left = `${finalX}px`;
+  noButton.style.top = `${finalY}px`;
 });
+
+
+
 const yesButton = document.getElementById('yes-button');
 
 yesButton.addEventListener("click", () => {
@@ -118,19 +123,19 @@ yesButton.addEventListener("click", () => {
   const gif1 = document.createElement("img");
   gif1.src = "./images/AdoredDenseAzurevasesponge-max-1mb.gif";
   gif1.alt = "GIF 1";
-  gif1.style.marginBottom = "20px"
+  gif1.style.marginBottom = "45px"
   gifContainer.appendChild(gif1);
 
   const gif2 = document.createElement("img");
   gif2.src = "./images/dancing-cat-33-title.gif";
   gif2.alt = "GIF 2";
-  gif2.style.marginBottom = "20px"
+  gif2.style.marginBottom = "45px"
   gifContainer.appendChild(gif2);
 
   const gif3 = document.createElement("img");
   gif3.src = "./images/giphy.gif";
   gif3.alt = "GIF 3";
-  gif3.style.marginBottom = "20px"
+  gif3.style.marginBottom = "45px"
   gifContainer.appendChild(gif3);
 
   gifContainer.style.display = "block";

@@ -55,8 +55,8 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    height: 500px;
-    width: 600px;
+    height: 70%;
+    width: 50%;
     background-color: #AEE2FF;
     padding: 20px;
     border-radius: 5px;
@@ -79,14 +79,16 @@ main {
     text-align: justify;
     padding: 30px;
     background-color: #ECF2FF;
-    
+    font-size: 16px;
   }
 
   .open-overlay-button {
     position: absolute;
     top: 100px;
     left: 10px; 
-    background-color: #FEDEFF;
+    background-color: #e8a6eb;
+    font-size: 1.2rem;
+    padding: 1.5rem 3rem
   }
 
   .gif-container-please {
@@ -124,8 +126,10 @@ main {
   #no-button {
     background-color: #FF55BB;
     color: #fff;
-    width: 6.25rem;
+    width: 7rem;
     padding: 1.25rem;
+    padding: 1.25rem;
+    font-size: 1rem;
   }
 
   #no-button:hover {
@@ -154,8 +158,9 @@ main {
   #yes-button {
     background-color: #0079FF;
     color: #fff;
-    width: 6.25rem;
+    width: 7rem;
     padding: 1.25rem;
+    font-size: 1rem;
   }
 
   #confetti-canvas {
@@ -167,11 +172,12 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    margin-bottom: -1;
   }
 
   .gif-container-panda img {
     max-width: 100%;
-    height: auto;
+    height: 300px;
   }
 
  
