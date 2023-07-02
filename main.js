@@ -65,10 +65,12 @@ yesButton.addEventListener("click", () => {
 
   let gif = document.getElementById("gif");
   let gifPanda = document.getElementById("gif-panda");
+  let gifPanda2 = document.getElementById("gif-panda-2");
   let header = document.getElementById("header-main");
   header.style.display = "none";
   gif.style.display = "none";
   gifPanda.style.display = "none";
+  gifPanda2.style.display = "none";
 
   // Change the style of the confetti canvas
   confettiElement.style.position = "absolute";
@@ -124,12 +126,14 @@ yesButton.addEventListener("click", () => {
   gif1.src = "./images/AdoredDenseAzurevasesponge-max-1mb.gif";
   gif1.alt = "GIF 1";
   gif1.style.marginBottom = "45px"
+  gif1.style.marginRight = "50px"
   gifContainer.appendChild(gif1);
 
   const gif2 = document.createElement("img");
   gif2.src = "./images/dancing-cat-33-title.gif";
   gif2.alt = "GIF 2";
   gif2.style.marginBottom = "45px"
+  gif2.style.marginRight = "50px"
   gifContainer.appendChild(gif2);
 
   const gif3 = document.createElement("img");
@@ -139,5 +143,5 @@ yesButton.addEventListener("click", () => {
   gifContainer.appendChild(gif3);
 
   gifContainer.style.display = "block";
- 
+
 });
