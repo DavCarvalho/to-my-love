@@ -64,13 +64,15 @@ yesButton.addEventListener("click", () => {
   overlayOpenButton.style.display = "none";
 
   let gif = document.getElementById("gif");
-  let gifPanda = document.getElementById("gif-panda");
-  let gifPanda2 = document.getElementById("gif-panda-2");
+  let gifCat = document.getElementById("gif-cat");
+  let gifCat2 = document.getElementById("gif-cat-2");
+  let akiImage = document.getElementById("aki");
   let header = document.getElementById("header-main");
   header.style.display = "none";
   gif.style.display = "none";
-  gifPanda.style.display = "none";
-  gifPanda2.style.display = "none";
+  gifCat.style.display = "none";
+  gifCat2.style.display = "none";
+  aki.style.display ="none";
 
   // Change the style of the confetti canvas
   confettiElement.style.position = "absolute";
@@ -84,9 +86,10 @@ yesButton.addEventListener("click", () => {
   confetti.render();
 
   const musica = document.getElementById("musiquinha");
-  musica.volume = 0.3;
+  musica.volume = 0.1;
   musica.play();
 
+  
   // Add the heart animation
   var love = setInterval(function() {
     var r_num = Math.floor(Math.random() * 40) + 1;
@@ -110,37 +113,75 @@ yesButton.addEventListener("click", () => {
 
 
   let p = document.createElement("p");
-  p.innerText = "EBAAAAAAAAAAAAAAAA!!! 🎉 \n Me manda mensagem para a gente marcar, OBRIGADOOO!";
+  p.innerText = "YUPPIIIIIII!!! 🎉 \n  VAMO MARCAR, OBRIGADOOO!";
   p.style.fontSize = "2rem";
   p.style.fontWeight = "bold";
   p.style.textAlign = "center";
   p.style.position = "absolute";
-  p.style.top = "35%";
+  p.style.top = "40%";
   p.style.left = "50%";
   p.style.transform = "translate(-50%, -50%)";
   document.body.appendChild(p);
 
   const gifContainer = document.getElementById("container-gifs-evento");
 
+
   const gif1 = document.createElement("img");
-  gif1.src = "./images/AdoredDenseAzurevasesponge-max-1mb.gif";
+  gif1.src = "./images/seal-sax.gif";
   gif1.alt = "GIF 1";
   gif1.style.marginBottom = "45px"
   gif1.style.marginRight = "50px"
+  gif1.style.height = "320px"
+  gif1.style.borderRadius = "30px"
   gifContainer.appendChild(gif1);
 
   const gif2 = document.createElement("img");
-  gif2.src = "./images/dancing-cat-33-title.gif";
+  gif2.src = "./images/c45.gif";
   gif2.alt = "GIF 2";
   gif2.style.marginBottom = "45px"
   gif2.style.marginRight = "50px"
+  gif2.style.height = "320px"
+  gif2.style.borderRadius = "30px"
   gifContainer.appendChild(gif2);
 
   const gif3 = document.createElement("img");
-  gif3.src = "./images/giphy.gif";
+  gif3.src = "./images/chainsaw-man-kobeni.gif";
   gif3.alt = "GIF 3";
   gif3.style.marginBottom = "45px"
+  gif3.style.height = "320px"
+  gif3.style.borderRadius = "30px"
   gifContainer.appendChild(gif3);
+
+
+  const gifContainer2 = document.getElementById("container-gif-evento-top")
+  gifContainer2.style.display = "flex"
+  gifContainer2.style.gap = "50px"
+  gifContainer2.style.justifyContent = "center" 
+  gifContainer2.style.position = "absolute";
+  gifContainer2.style.top = "0"; 
+  gifContainer2.style.left = "0"; 
+  gifContainer2.style.right = "0"; 
+  gifContainer2.style.textAlign = "center"; 
+  gifContainer2.style.zIndex = "-9999"
+
+  const gif4 = document.createElement("img");
+  gif4.src = "./images/happy-happy-happy-cat.gif"; 
+  gif4.alt = "GIF 4"; 
+  gif4.style.marginBottom = "45px";
+  gif4.style.height = "250px";
+  gif4.style.borderRadius = "30px";
+  gifContainer2.appendChild(gif4); 
+
+  const gif5 = document.createElement("img");
+  gif5.src = "./images/gengar-jumping.gif"; 
+  gif5.alt = "GIF 5"; 
+  gif5.style.marginBottom = "45px";
+  gif5.style.height = "250px";
+  gif5.style.borderRadius = "30px";
+  gifContainer2.appendChild(gif5); 
+
+
+
 
   gifContainer.style.display = "block";
 

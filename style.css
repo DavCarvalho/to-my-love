@@ -15,11 +15,11 @@ body {
   justify-content: space-between;
   font-family: sans-serif;
   font-size: 1.2rem;
-  background-color: #B9F3FC;
+  background-color: #a883d6;
 }
 
 header {
-  background-color: #93C6E7;
+  background-color: #9672c4;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -57,7 +57,7 @@ main {
     gap: 30px;
     height: 70%;
     width: 50%;
-    background-color: #AEE2FF;
+    background-color: #8462b1;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -168,7 +168,7 @@ main {
     height: 0;
   }
 
-  .gif-container-panda {
+  .gif-container-cat {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
@@ -176,7 +176,7 @@ main {
     margin-bottom: -1;
   }
 
-  .gif-container-panda img {
+  .gif-container-cat img {
     max-width: 100%;
     height: 300px;
   }
