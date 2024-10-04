@@ -113,7 +113,7 @@ function handleYesClick() {
     transform: "translate(-50%, -50%)",
     zIndex: "1001",
   });
-  celebrationText.innerText = "YUPPIIIIIII!!! 🎉 \n VAMO MARCAR!";
+  celebrationText.innerText = "YUPPIIIIIII!!! 🎉 \n ";
   document.body.appendChild(celebrationText);
 
   // Adicionar GIFs de celebração
