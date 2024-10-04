@@ -7,6 +7,10 @@
 html,
 body {
   height: 100%;
+  background-image: url("./blue_bg_flower.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -15,12 +19,11 @@ body {
   justify-content: space-between;
   font-family: sans-serif;
   font-size: 1.2rem;
-  background-color: #a883d6;
+  background-color: #42b0c4;
 }
 
 header {
-  background-color: #9672c4;
-  color: #fff;
+  color: #f87bd2e5;
   padding: 1rem;
   text-align: center;
 }
@@ -33,226 +36,255 @@ main {
   height: 100%;
 }
 
+/* Estilos para o overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Z-index alto para sobrepor outros elementos */
+  visibility: hidden; /* Inicia oculto */
+}
 
-  /* Estilos para o overlay */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo semi-transparente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; /* Z-index alto para sobrepor outros elementos */
-    visibility: hidden; /* Inicia oculto */
+/* Estilos para a caixa de texto */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  height: 70%;
+  width: 50%;
+  background-color: #8462b1;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Estilos para o botão de fechar */
+.close-button {
+  position: absolute;
+  top: 5rem;
+  right: 17rem;
+  background-color: #ff55bb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.text-area-overlay {
+  flex-grow: 1;
+  text-align: justify;
+  padding: 30px;
+  background-color: #ecf2ff;
+  font-size: 16px;
+}
+
+.open-overlay-button {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  background-color: #e8a6eb;
+  font-size: 1.2rem;
+  padding: 1.5rem 3rem;
+}
+
+.gif-container-please {
+  margin-bottom: 1rem;
+}
+
+.gif-container-please img {
+  max-width: 100%;
+  height: 20rem;
+  width: 23.625rem;
+  margin-top: 20px;
+  margin-bottom: 1.875rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 8.75rem;
+}
+
+button {
+  padding: 1.25rem 2.5rem;
+  margin: 0 1rem;
+  border-radius: 0.3125rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#no-button {
+  background-color: #ff55bb;
+  color: #fff;
+  width: 7rem;
+  padding: 1.25rem;
+  padding: 1.25rem;
+  font-size: 1rem;
+}
+
+#no-button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
   }
-
-  /* Estilos para a caixa de texto */
-  .text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    height: 70%;
-    width: 50%;
-    background-color: #8462b1;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
+  25% {
+    transform: translate(-0.3125rem, 0);
   }
-
-  /* Estilos para o botão de fechar */
-  .close-button {
-   position: absolute;
-   top: 5rem;
-   right: 17rem;
-   background-color: #FF55BB;
-   color: white;
-   font-size: 16px;
-   cursor: pointer;
+  50% {
+    transform: translate(0, -0.3125rem);
   }
-
-  .text-area-overlay {
-    flex-grow: 1;
-    text-align: justify;
-    padding: 30px;
-    background-color: #ECF2FF;
-    font-size: 16px;
+  75% {
+    transform: translate(0.3125rem, 0);
   }
-
-  .open-overlay-button {
-    position: absolute;
-    top: 100px;
-    left: 10px; 
-    background-color: #e8a6eb;
-    font-size: 1.2rem;
-    padding: 1.5rem 3rem
+  100% {
+    transform: translate(0, 0);
   }
+}
 
-  .gif-container-please {
-    margin-bottom: 1rem;
-  }
+#yes-button {
+  background-color: #0079ff;
+  color: #fff;
+  width: 7rem;
+  padding: 1.25rem;
+  font-size: 1rem;
+}
 
-  .gif-container-please img {
-    max-width: 100%;
-    height: 20rem;
-    width: 23.625rem;
-    margin-top: 20px;
-    margin-bottom: 1.875rem;
-  }
+#confetti-canvas {
+  width: 0;
+  height: 0;
+}
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 8.75rem;
-  }
+.gif-container-cat {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 50px;
+  margin-bottom: -1;
+}
 
-  button {
-    padding: 1.25rem 2.5rem;
-    margin: 0 1rem;
-    border-radius: 0.3125rem;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
+.gif-container-cat img {
+  max-width: 100%;
+  height: 300px;
+}
 
-  button:hover {
-    transform: scale(1.1);
-  }
-
-  #no-button {
-    background-color: #FF55BB;
-    color: #fff;
-    width: 7rem;
-    padding: 1.25rem;
-    padding: 1.25rem;
-    font-size: 1rem;
-  }
-
-  #no-button:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes shake {
-    0% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(-0.3125rem, 0);
-    }
-    50% {
-      transform: translate(0, -0.3125rem);
-    }
-    75% {
-      transform: translate(0.3125rem, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
-
-  #yes-button {
-    background-color: #0079FF;
-    color: #fff;
-    width: 7rem;
-    padding: 1.25rem;
-    font-size: 1rem;
-  }
-
-  #confetti-canvas {
-    width: 0;
-    height: 0;
-  }
-
-  .gif-container-cat {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    gap: 50px;
-    margin-bottom: -1;
-  }
-
-  .gif-container-cat img {
-    max-width: 100%;
-    height: 300px;
-  }
-
- 
-
-  .bg_heart {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden
- }
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
 .heart {
-    position: fixed;
-    top: -50%;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -m-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    
- }
+  position: fixed;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -m-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bg_heart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  transform: rotate(-45deg);
+  animation: heartfall linear forwards;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
 
 .heart:before {
-    position: absolute;
-    top: -50%;
-    left: 0;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 100%;
+  top: -50%;
+  left: 0;
 }
 
 .heart:after {
-    position: absolute;
-    top: 0;
-    right: -50%;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 100%;
+  top: 0;
+  right: -50%;
 }
 
-  @-webkit-keyframes love {
-    0%{top:110%}
+@keyframes love {
+  to {
+    top: 110%;
   }
-  @-moz-keyframes love {
-    0%{top:110%}
+}
+
+@keyframes heartfall {
+  to {
+    top: 110%;
   }
-  @-ms-keyframes love {
-    0%{top:110%}
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
   }
-  @keyframes love {
-    0%{top:110%}
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
   }
-  
-  
-  @media screen and (max-width: 768px) {
-    header {
-      font-size: 1.5rem;
-    }
-    main {
-      padding: 1rem;
-    }
-    .gif-container-please {
-      margin-bottom: 0.5rem;
-    }
-    button {
-      padding: 0.625rem 1.25rem;
-      margin: 0.625rem;
-      font-size: 1rem;
-    }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
   }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  .gif-container-please {
+    margin-bottom: 0.5rem;
+  }
+  button {
+    padding: 0.625rem 1.25rem;
+    margin: 0.625rem;
+    font-size: 1rem;
+  }
+}
